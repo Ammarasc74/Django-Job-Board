@@ -17,7 +17,7 @@ JOB_TYPE = (
 )
 
 
-class Job(models.Model): #table 
+class job(models.Model): #table 
     title = models.CharField(max_length=100) #column
 
     job_type = models.CharField(max_length=15, choices=JOB_TYPE)
@@ -34,6 +34,7 @@ class Job(models.Model): #table
 
 class category(models.Model): #table 
     name = models.CharField(max_length=25) #column
+    
     
     def __str__(self):
         return self.name
