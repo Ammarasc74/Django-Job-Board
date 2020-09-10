@@ -52,3 +52,18 @@ class category(models.Model): #table
     
     def __str__(self):
         return self.name
+
+
+
+class apply(models.Model):
+    job = models.ForeignKey(job,related_name='apply_job',on_delete=models.CASCADE)
+    name = models.CharField(max_length=50)
+    email = models.EmailField(max_length=100)
+    website = models.URLField()
+    cv = models.FileField(upload_to='apply/')
+    cover_letter = models.TextField(max_length=500)
+    created_at = models.DateTimeField(auto_now=True)
+
+
+    def __str__(self):
+        return self.name
