@@ -53,7 +53,7 @@
                                 <div class="main-menu  d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a href="/">home</a></li>
+                                            <li><a href="{% url 'Home:Home'%}">Home</a></li>
                                             <li><a href="{% url 'jobs:job_list'%}">Browse Job</a></li>
                                        
                                             <li><a href="{% url 'Contact:Contact'%}">Contact</a></li>
@@ -71,8 +71,11 @@
                                     {% else %}
                                     <div class="phone_num d-none d-xl-block">
                                         <a href="{% url 'login'%}">Log in</a>
+                                        
                                     </div>
                                     {%endif%}
+
+                                    
                                     
                                     <div class="d-none d-lg-block">
                                         <a class="boxed-btn3" href="{% url 'job:add_job'%}">Post a Job</a>
