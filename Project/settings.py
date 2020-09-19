@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -23,7 +24,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = '=3x*a&vz@=d)*i4(3590)qvyxody6dxgs)cueurtziff#3lrhd'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -45,7 +46,18 @@ INSTALLED_APPS = [
     'Contact',
     'Home',
     'rest_framework',
+    'djoser',
+    'rest_framework.authtoken',
+    
 ]
+
+REST_FRAMEWORK = {
+    
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ),
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -131,6 +143,7 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
     '/var/www/static/',
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT  = BASE_DIR / "media"
@@ -142,3 +155,7 @@ EMAIL_HOST_PASSWORD = 'gkwfeacjbggvaaal'
 EMAIL_USE_TLS = True
 EMAIL_PORT = '587'
               
+# Activate Django-Heroku.
+django_heroku.settings(locals())
+
+ALLOWED_HOSTS = ['https://JobBoard.herokuapp.com', 'localhost', '127.0.0.1']
