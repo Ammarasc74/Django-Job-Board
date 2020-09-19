@@ -26,7 +26,7 @@ SECRET_KEY = '=3x*a&vz@=d)*i4(3590)qvyxody6dxgs)cueurtziff#3lrhd'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://JobBoard.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -159,4 +159,3 @@ EMAIL_PORT = '587'
 # Activate Django-Heroku.
 django_heroku.settings(locals())
 
-ALLOWED_HOSTS = ['https://JobBoard.herokuapp.com', 'localhost', '127.0.0.1']
