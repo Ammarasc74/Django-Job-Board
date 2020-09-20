@@ -13,6 +13,9 @@ import os
 from pathlib import Path
 import django_heroku
 
+# Activate Django-Heroku.
+django_heroku.settings(locals())
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
@@ -144,12 +147,12 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/staticfiles/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_DIRS = [
-    BASE_DIR / "staticfiles",
-    '/var/www/staticfiles/',
+    BASE_DIR / "static",
+    '/var/www/static/',
 ]
 
 
@@ -163,6 +166,5 @@ EMAIL_HOST_PASSWORD = 'gkwfeacjbggvaaal'
 EMAIL_USE_TLS = True
 EMAIL_PORT = '587'
               
-# Activate Django-Heroku.
-django_heroku.settings(locals())
+
 
