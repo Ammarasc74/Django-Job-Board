@@ -1,1 +1,1 @@
-web: gunicorn JobBoard.wsgi
+web: gunicorn Project.wsgi
