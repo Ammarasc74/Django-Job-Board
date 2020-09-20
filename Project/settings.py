@@ -13,9 +13,6 @@ import os
 from pathlib import Path
 import django_heroku
 
-# Activate Django-Heroku.
-django_heroku.settings(locals())
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
@@ -70,7 +67,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'Project.urls'
@@ -137,13 +133,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-
-# Simplified static file serving.
-# https://warehouse.python.org/project/whitenoise/
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
@@ -166,5 +156,6 @@ EMAIL_HOST_PASSWORD = 'gkwfeacjbggvaaal'
 EMAIL_USE_TLS = True
 EMAIL_PORT = '587'
               
-
+# Activate Django-Heroku.
+django_heroku.settings(locals())
 
