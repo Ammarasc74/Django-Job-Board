@@ -41,10 +41,10 @@ INSTALLED_APPS = [
     # My apps 
     "bootstrap4",
     'rest_framework',
-    'job',
-    'accounts',
-    'django_filters',
     'Contact',
+    'accounts',
+    'job',
+    'django_filters',
     'Home',
     'djoser',
     'rest_framework.authtoken',
