@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'job',
     'django_filters',
     'Home',
-    'Blog',
+    
     'djoser',
     'rest_framework.authtoken',
     
