@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = '=3x*a&vz@=d)*i4(3590)qvyxody6dxgs)cueurtziff#3lrhd'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['https://JobBoard.herokuapp.com', 'localhost', '127.0.0.1']
 
