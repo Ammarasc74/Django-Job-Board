@@ -32,7 +32,6 @@ ALLOWED_HOSTS = ['https://JobBoard.herokuapp.com', 'localhost', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
-    'accounts',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # My apps 
     'job',
+    'accounts',
     "bootstrap4",
     'django_filters',
     'Contact',
