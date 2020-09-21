@@ -13,6 +13,9 @@ import os
 from pathlib import Path
 import django_heroku
 
+# Activate Django-Heroku.
+django_heroku.settings(locals())
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
@@ -46,7 +49,6 @@ INSTALLED_APPS = [
     'job',
     'django_filters',
     'Home',
-    
     'djoser',
     'rest_framework.authtoken',
     
@@ -134,7 +136,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
@@ -157,6 +158,5 @@ EMAIL_HOST_PASSWORD = 'gkwfeacjbggvaaal'
 EMAIL_USE_TLS = True
 EMAIL_PORT = '587'
               
-# Activate Django-Heroku.
-django_heroku.settings(locals())
+
 
