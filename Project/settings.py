@@ -25,9 +25,9 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = '=3x*a&vz@=d)*i4(3590)qvyxody6dxgs)cueurtziff#3lrhd'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['https://cryptic-dawn-05790.herokuapp.com//', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['cryptic-dawn-05790.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -137,8 +137,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+STATIC_ROOT = BASE_DIR / "staticfiles"
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
