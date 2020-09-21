@@ -27,7 +27,7 @@ SECRET_KEY = '=3x*a&vz@=d)*i4(3590)qvyxody6dxgs)cueurtziff#3lrhd'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://peaceful-beyond-40034.herokuapp.com/', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['https://git.heroku.com/cryptic-dawn-05790.git/', 'localhost', '127.0.0.1']
 
 
 # Application definition
