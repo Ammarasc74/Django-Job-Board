@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = '=3x*a&vz@=d)*i4(3590)qvyxody6dxgs)cueurtziff#3lrhd'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['cryptic-dawn-05790.herokuapp.com', '127.0.0.1']
 
@@ -139,21 +139,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATIC_ROOT = "/var/www/cryptic-dawn-05790.herokuapp.com/static/"
 STATIC_URL = '/static/'
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    os.path.join(BASE_DIR, "static"),
     '/var/www/static/',
-    # '/Ammar/programing/django/Django-Job-Board//static/',
-    
 ]
 
-
 MEDIA_URL = '/media/'
-MEDIA_ROOT  = BASE_DIR / "media"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
